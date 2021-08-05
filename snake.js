@@ -25,23 +25,22 @@ class Snake {
         let head = this.body[this.body.length - 1].copy();
         this.len++;
         this.body.push(head);
- 
     }
  
     endGame() {
-         let x = this.body[this.body.length - 1].x;
-         let y = this.body[this.body.length - 1].y;
-         if (x > w - 1 || x < 0 || y > h-1 || y < 0) {
-            return true
-          }
-         for (let i = 0; i < this.body.length - 1; i++) {
-         let part = this.body[i];
-         if (part.x == x && part.y == y) {
-             return true;
-         }
+        let x = this.body[this.body.length - 1].x;
+        let y = this.body[this.body.length - 1].y;
+        if (x > w - 1 || x < 0 || y > h-1 || y < 0) {
+           return true
+        }
+        for (let i = 0; i < this.body.length - 1; i++) {
+            let part = this.body[i];
+            if (part.x == x && part.y == y) {
+                return true;
+            }
+        }
+        return false;
     }
-    return false;
- }
  
     eat(pos) {
         let x = this.body[this.body.length - 1].x;
@@ -55,9 +54,9 @@ class Snake {
  
     show() {
         for (let i = 0; i < this.body.length; i++) {
-        fill(0)
-        noStroke();
-        rect(this.body[i].x, this.body[i].y, 1, 1)
+            fill(0)
+            noStroke();
+            rect(this.body[i].x, this.body[i].y, 1, 1)
         }
-     }
- }
+    }
+}
