@@ -9,7 +9,7 @@ class Snake {
     }
  
     setDir(x, y) {
-        this.xidr = x;
+        this.xdir = x;
         this.ydir = y;
     }
  

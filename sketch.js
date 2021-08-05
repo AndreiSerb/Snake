@@ -20,8 +20,7 @@ function foodLocation() {
     food = createVector(x, y);
 }
 
-function keyPressed() {
-    console.log(keyCode, keyCode === LEFT_ARROW); 
+function keyPressed() { 
         if (keyCode === LEFT_ARROW) {
             snake.setDir(-1, 0);
         } else if (keyCode === RIGHT_ARROW) {
